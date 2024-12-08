@@ -757,3 +757,39 @@
 /* End of Header main */
 
 /* End of Header */
+
+#header .nav.navbar-nav {
+    .custom-menu {
+        .nav-item {
+            margin: 0;
+            
+            .nav-link {
+                padding: 0.5rem 1rem;
+                color: $white;
+                
+                &:hover,
+                &:focus {
+                    background-color: $secondary;
+                }
+            }
+        }
+        
+        .dropdown-menu {
+            margin-top: 0;
+            border: none;
+            border-radius: 0;
+            background: $white;
+            
+            .dropdown-item {
+                padding: 0.5rem 1rem;
+                color: $primary;
+                
+                &:hover,
+                &:focus {
+                    color: $white;
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
