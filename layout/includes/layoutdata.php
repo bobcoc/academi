@@ -68,8 +68,7 @@ if (!$courseindex) {
     $courseindexopen = false;
 }
 
-$themestyleheader = theme_academi_get_setting('themestyleheader');
-$extraclasses[] = ($themestyleheader) ? 'theme-based-header' : 'moodle-based-header';
+$extraclasses[] = 'moodle-based-header';
 
 $forceblockdraweropen = $OUTPUT->firstview_fakeblocks();
 
