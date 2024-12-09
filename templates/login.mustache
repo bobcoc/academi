@@ -35,7 +35,33 @@
     {{> core/local/toast/wrapper}}
     <div id="page-wrapper">
         {{{ output.standard_top_of_body_html }}}
-        {{> theme_academi/header }}
+        
+        <div class="header-main">
+            <div class="container-fluid">
+                <nav class="navbar navbar-light bg-faded navbar-expand">
+                    <a href="{{{ config.wwwroot }}}/?redirect=0" class="navbar-brand {{# output.get_logo_url }}has-logo{{/ output.get_logo_url }}">
+                        {{# output.should_display_logo }}
+                            {{# output.get_logo_html }}
+                                <span class="logo">
+                                    {{{ output.get_logo_html }}}
+                                </span>
+                            {{/ output.get_logo_html }}
+                            {{^ output.get_logo_html }}
+                                {{# output.get_logo_url }}
+                                    <span class="logo">
+                                        <img src="{{ output.get_logo_url }}" alt="{{ sitename }}">
+                                    </span>
+                                {{/ output.get_logo_url }}
+                            {{/ output.get_logo_html }}
+                        {{/ output.should_display_logo }}
+                        {{# output.should_display_sitename }}
+                            <span class="site-name">{{{ sitename }}}</span>
+                        {{/ output.should_display_sitename }}
+                    </a>
+                </nav>
+            </div>
+        </div>
+
         <div id="page" class="container-fluid mt-0">
             <div id="page-content" class="row">
                 <div id="region-main-box" class="col-12">

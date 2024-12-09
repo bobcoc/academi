@@ -133,7 +133,11 @@ $THEME->layouts = [
     'login' => [
         'file' => 'login.php',
         'regions' => [],
-        'options' => ['langmenu' => true],
+        'options' => [
+            'langmenu' => true,
+            'nonavbar' => true,
+            'bodyattributes' => ['class' => 'pagelayout-login']
+        ],
     ],
 
     // Pages that appear in pop-up windows - no navigation, no blocks, no header and bare activity header.

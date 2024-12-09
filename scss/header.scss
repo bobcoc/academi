@@ -1,6 +1,10 @@
 /* Header main */
 body {
-    padding-top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
@@ -84,8 +88,11 @@ body {
 }
 
 #page-wrapper {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #page {
@@ -102,4 +109,48 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     min-height: auto !important;
+}
+
+.pagelayout-login {
+    #page {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    .header-main {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+// 登录页面特殊样式
+body#page-login-index {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    
+    #page-wrapper {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    .header-main {
+        position: relative !important;
+        top: 0 !important;
+    }
+    
+    // 移除可能存在的固定定位
+    .fixed-top {
+        position: relative !important;
+    }
+    
+    // 确保内容区域没有多余的边距
+    #page-content {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
+
+// 移除任何可能的固定定位导航
+.navbar.fixed-top {
+    position: relative !important;
 }
