@@ -46,3 +46,28 @@ body {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
+
+.logo-container {
+    width: 300px;
+    height: auto !important;
+    min-height: fit-content !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    height: auto !important;
+}
+
+.header-main .navbar {
+    min-height: auto !important;
+    height: auto !important;
+}
