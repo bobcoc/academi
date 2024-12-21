@@ -29,8 +29,6 @@
     }
 }}
 
-{{> theme_academi/navbar }}
-
 {{#themestyleheader}}
     <div class="header-main">
         <div class="container-fluid">
@@ -40,23 +38,23 @@
                     hidden-sm-down
                 {{/ logourl }}
                     ">
-{{#showlogo}}
-    {{# logohtml }}
-        <span class="logo">
-            {{{ logohtml }}}
-        </span>
-    {{/ logohtml }}
-    {{^ logohtml }}
-        {{# logourl }}
-            <span class="logo">
-                <img src="{{logourl}}" alt="{{sitename}}">
-            </span>
-        {{/ logourl }}
-        {{^ logourl }}
-            <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
-        {{/ logourl }}
-    {{/ logohtml }}
-{{/showlogo}}
+                {{#showlogo}}
+                    {{# logohtml }}
+                        <span class="logo">
+                            {{{ logohtml }}}
+                        </span>
+                    {{/ logohtml }}
+                    {{^ logohtml }}
+                        {{# logourl }}
+                            <span class="logo">
+                                <img src="{{logourl}}" alt="{{sitename}}">
+                            </span>
+                        {{/ logourl }}
+                        {{^ logourl }}
+                            <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
+                        {{/ logourl }}
+                    {{/ logohtml }}
+                {{/showlogo}}
                 {{#showsitename}}
                     <span class="nav-site-name">{{{sitename}}}</span>
                 {{/showsitename}}
@@ -68,11 +66,11 @@
                     </div>
                 {{/primarymoremenu}}
 
-                <ul class="navbar-nav d-none d-md-flex my-1 px-1">
-                    <!-- page_heading_menu -->
-                    {{{ output.page_heading_menu }}}
-                </ul>
-
+                <div class="ml-auto d-flex">
+                    <div class="usermenu">
+                        {{{ output.user_menu }}}
+                    </div>
+                </div>
             </nav>
         </div>
     </div>
