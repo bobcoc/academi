@@ -42,21 +42,21 @@
                     <div class="course-slider col-md-12" data-crow="{{totalavacount}}">
                         {{#courses}}
                             <div class="available-content">
-                                <div class="available-img">
-                                    <a href={{link}}>
-                                        <img src="{{imgurl}}" width="249" height="200" alt={{name}}>
-                                    </a>
-                                </div>
-                                <div class="available-info">
-                                    <div class="title-block">
-                                        <h6><a href={{link}}>{{name}}</a></h6>
+                                <a href="{{link}}" class="course-link">
+                                    <div class="available-img">
+                                        <img src="{{imgurl}}" width="249" height="200" alt="{{name}}">
                                     </div>
-                                    {{#summary}}
-                                        <div class="desc-block">
-                                            <p>{{#shortentext}} 120, {{{summary}}} {{/shortentext}}</p>
+                                    <div class="available-info">
+                                        <div class="title-block">
+                                            <h6>{{name}}</h6>
                                         </div>
-                                    {{/summary}}
-                                </div>
+                                        {{#summary}}
+                                            <div class="desc-block">
+                                                <p>{{#shortentext}} 120, {{{summary}}} {{/shortentext}}</p>
+                                            </div>
+                                        {{/summary}}
+                                    </div>
+                                </a>
                             </div>
                         {{/courses}}
                     </div>
