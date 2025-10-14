@@ -10,10 +10,17 @@ define(['jquery', 'theme_academi/slick'], function($) {
                 arrows: true,
                 swipe: true,
                 infinite: false,
-                slidesToShow: 4,
-                slidesToScroll: 4,
+                slidesToShow: 5,
+                slidesToScroll: 5,
                 rtl: RTL,
                 responsive: [
+                    {
+                        breakpoint: 1400,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4,
+                        }
+                    },
                     {
                         breakpoint: 991,
                         settings: {
