@@ -140,6 +140,22 @@ $choices = [
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $temp->add($setting);
 
+// Course per row setting.
+$name = 'theme_academi/courseperrow';
+$title = get_string('courseperrow', 'theme_academi');
+$description = get_string('courseperrow_desc', 'theme_academi');
+$default = '4';
+$choices = [
+    '2' => '2',
+    '3' => '3',
+    '4' => '4',
+    '5' => '5',
+    '6' => '6',
+];
+$setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+$setting->set_updatedcallback('theme_reset_all_caches');
+$temp->add($setting);
+
 // Select the combo list box type option.
 $name = 'theme_academi/comboListboxType';
 $title = get_string('comboListboxType', 'theme_academi');

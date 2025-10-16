@@ -2,10 +2,11 @@
 -------------------------*/
 
 /* Available courses grid layout */
+/* Note: The number of courses per row is now configured in Theme Settings */
+/* Go to: Site administration → Appearance → Themes → Academi → General */
 .available-courses .available-block .course-grid {
     margin-top: 30px;
     display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
     gap: 20px;
     width: 100%;
 }

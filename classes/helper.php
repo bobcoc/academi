@@ -70,6 +70,8 @@ class helper {
         $footerbgopacity = (!empty($footerbgoverlayval)) ? $this->get_hexa($primary, $footerbgoverlayval) : 0.4;
         $pagesizecustomval = theme_academi_get_setting('pagesizecustomval');
         $fontsize = theme_academi_get_setting('fontsize');
+        $courseperrow = theme_academi_get_setting('courseperrow');
+        $courseperrow = (!empty($courseperrow)) ? $courseperrow : 4; // Default to 4.
         $primary30 = $this->get_hexa($primary, '0.3');
         $secondary30 = $this->get_hexa($secondary, '0.3');
         $primary70 = $this->get_hexa($primary, '0.7');
@@ -79,6 +81,7 @@ class helper {
         $scss .= $slideopacity ? '$url_1:'.$slideopacity.";\n" : "";
         $scss .= $pagesizecustomval ? '$custom-container:'.$pagesizecustomval."px;\n" : "";
         $scss .= $fontsize ? '$fontsize:'.$fontsize. "px;" : "";
+        $scss .= '$course-columns:' . $courseperrow . ";\n";
         if (!empty($primary)) {
             $scss .= $footerbgopacity ? '$footerbgopacity:'.$footerbgopacity.";\n" : "";
             $scss .= $primary30 ? '$primary_30:'.$primary30.";\n" : "";
