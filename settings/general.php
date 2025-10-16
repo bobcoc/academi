@@ -142,8 +142,8 @@ $temp->add($setting);
 
 // Course per row setting.
 $name = 'theme_academi/courseperrow';
-$title = get_string('courseperrow', 'theme_academi');
-$description = get_string('courseperrow_desc', 'theme_academi');
+$title = '每行课程数'; // Temporary hardcoded for testing
+$description = '设置首页每行显示的课程数量（默认：4）。';
 $default = '4';
 $choices = [
     '2' => '2',
