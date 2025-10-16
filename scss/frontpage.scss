@@ -953,114 +953,97 @@
 /* End of Promoted Courses */
 
 /* Available courses */
-.available-courses .available-block .course-slider {
+.available-courses .available-block .course-grid {
     margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     .available-content {
-        display: none;
-    }
-    .slick-slide {
-        margin-right: 15px;
-        .available-content {
-            display: block;
-            position: relative;
-            .available-img {
-                height: 250px;
-                overflow: hidden;
-                position: relative;
-                &:after {
-                    background: $white;
-                    content: "";
-                    width: 50px;
-                    height: 130%;
-                    left: -115px;
-                    opacity: .2;
-                    position: absolute;
-                    top: -55px;
-                    z-index: 0;
-                    transform: rotate(35deg);
-                    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
-                }
-                &:hover:after {
-                    width: 150%;
-                    height: 180%;
-                    top: -140px;
-                    left: -60px;
-                    z-index: 0;
-                    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
-                }
-                a,
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-top-left-radius: 5px;
-                    border-top-right-radius: 5px;
-                }
-            }
-            .available-info {
-                width: 100%;
-                min-height: 70px;
-                background: $primary;
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
-                padding: 0 20px 5px 20px;
-                display: flex;
-                align-items: center;
-                h6 {
-                    margin: 10px 0;
-                    a {
-                        color: $white;
-                    }
-                }
-            }
-            &:hover {
-                .available-info {
-                    opacity: 1;
-                    &:before {
-                        width: 100%;
-                        transition: all 0.5s ease-in;
-                    }
-                }
-            }
-        }
-    }
-    .slick-arrow {
-        text-indent: -999em;
-        border-radius: 5px;
-        position: absolute;
-        top: 40%;
-        z-index: 1;
+        display: block;
+        position: relative;
+        transition: transform 0.3s ease;
         &:hover {
-            background-color: $secondary;
+            transform: translateY(-5px);
         }
-        &:before {
-            content: '\f104';
-            font-family: $font_0;
-            font-weight: $font_weight;
-            text-indent: 0;
-            float: left;
+        .available-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            &:after {
+                background: $white;
+                content: "";
+                width: 50px;
+                height: 130%;
+                left: -115px;
+                opacity: .2;
+                position: absolute;
+                top: -55px;
+                z-index: 0;
+                transform: rotate(35deg);
+                transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            &:hover:after {
+                width: 150%;
+                height: 180%;
+                top: -140px;
+                left: -60px;
+                z-index: 0;
+                transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            a,
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
         }
-        &.slick-prev {
-            left: -10px;
-        }
-        &.slick-next {
-            right: 0;
-            &:before {
-                content: '\f105';
+        .available-info {
+            width: 100%;
+            min-height: 70px;
+            background: $primary;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 0 20px 5px 20px;
+            display: flex;
+            align-items: center;
+            h6 {
+                margin: 10px 0;
+                a {
+                    color: $white;
+                }
             }
         }
     }
 }
 
+/* 响应式断点 */
+@media (max-width: 1400px) {
+    .available-courses .available-block .course-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .available-courses .available-block .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .available-courses .available-block .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
 @media (max-width: 575px) {
-    .available-courses .available-block .course-slider {
+    .available-courses .available-block .course-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
         padding: 0;
-        .slick-slide {
-            margin-right: 0;
-        }
-        .slick-arrow.slick-prev {
-            left: 0;
-        }
     }
 }
 /* End of Available courses */
