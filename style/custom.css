@@ -1,6 +1,55 @@
 /* Custom CSS Settings
 -------------------------*/
 
+/* Available courses grid layout */
+.available-courses .available-block .course-grid {
+    margin-top: 30px;
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 20px;
+    width: 100%;
+}
+
+.available-courses .available-block .course-grid .available-content {
+    display: block !important;
+    position: relative;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.available-courses .available-block .course-grid .available-content:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1400px) {
+    .available-courses .available-block .course-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .available-courses .available-block .course-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .available-courses .available-block .course-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    .available-courses .available-block .course-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 15px;
+        padding: 0;
+    }
+}
+
 /* Course link styles */
 .course-link {
     text-decoration: none;

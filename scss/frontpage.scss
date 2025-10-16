@@ -955,13 +955,15 @@
 /* Available courses */
 .available-courses .available-block .course-grid {
     margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
     gap: 20px;
+    width: 100%;
     .available-content {
-        display: block;
+        display: block !important;
         position: relative;
         transition: transform 0.3s ease;
+        width: 100%;
         &:hover {
             transform: translateY(-5px);
         }
@@ -1021,27 +1023,27 @@
 /* 响应式断点 */
 @media (max-width: 1400px) {
     .available-courses .available-block .course-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr) !important;
     }
 }
 
 @media (max-width: 991px) {
     .available-courses .available-block .course-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: 15px;
     }
 }
 
 @media (max-width: 767px) {
     .available-courses .available-block .course-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 15px;
     }
 }
 
 @media (max-width: 575px) {
     .available-courses .available-block .course-grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr) !important;
         gap: 15px;
         padding: 0;
     }
